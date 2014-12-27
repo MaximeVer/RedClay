@@ -7,8 +7,12 @@
 		die('Error: '. $e->getMessage());
 	}
 
-	echo 'test';
-	$number_of_category=2;
+	// number of category 
+	
+	$req = $bdd->prepare('SELECT * FROM tbl_category');
+	$req->execute();
+	$number_of_category=$req->rowCount();
+
 	$usnum=$_POST['usnum'];
 	
 	for ($i=1;$i<=$number_of_category;$i++){

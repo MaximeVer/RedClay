@@ -55,7 +55,7 @@
 	    <div data-role="navbar">
 	      <ul>
 	        <li>
-	          <a data-icon="arrow-l">Go Back</a>
+	          <a data-icon="arrow-l" href="registration.php?case=3&usnum=<?php echo $_GET['usnum']; ?>">Go Back</a>
 	        </li>
 	        <li>
 				<input data-icon="edit" type="submit" value="submit" data-iconpos="top" />

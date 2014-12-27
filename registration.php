@@ -1,3 +1,21 @@
+<?php
+	
+	
+	if (isset($_GET['case'])){
+		if ($_GET['case']=='3'){
+			try{
+				$bdd = new PDO('mysql:host=localhost;dbname=redclay', 'root', '');
+			}
+			catch(Exception $e){
+				die('Error: '. $e->getMessage());
+			}
+			
+			$req = $bdd->prepare('DELETE FROM tbl_users WHERE user_number= ? ');
+			$req->execute(array($_GET['usnum']));
+			
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
