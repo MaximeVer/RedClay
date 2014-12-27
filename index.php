@@ -25,10 +25,21 @@
 		</div>
 		<div data-role="content" class="content">
 			<form action="homepage.php" method="post">
-				<paper-input label="Username"></paper-input>
-				<paper-input label="Password" type="password"></paper-input>
-				<input class="ui-btn" type="submit" value='Login'/>
+				<input name="username" value="Username" type="text" onFocus="javascript:this.value=''"/>
+				<input name="password" value="Password" type="password" onFocus="javascript:this.value=''"/>
+				<input class="ui-btn" type="submit" value='Login' style="width: 100%"/>
 			</form>
+			<?php 
+				if (isset($_GET['case'])){
+					if ($_GET['case']=='1'){
+			?>
+			<div class="ui-grid-a">
+				<div class="ui-block-a" style="color:red">
+					<b>Wrong username and/or password</b>
+				</div>
+			</div>
+					
+				<?php }} ?>
 			<a href="registration.php" class="ui-link">
 				<p  class="registration">Find your language partner now!</p>
 			</a>
