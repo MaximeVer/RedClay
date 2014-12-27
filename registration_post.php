@@ -38,7 +38,7 @@
 	}
 	else{
 		
-		 header('Location:registration.php?case=1');
+		header('Location:registration.php?case=1');
 	}
 	
 ?>
