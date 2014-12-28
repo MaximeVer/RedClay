@@ -5,8 +5,7 @@
 	}
 	
 	
-	$case = $_GET['case'];
-	$numdem = $_GET['numdem'];
+	$numdel = $_GET['numdel'];
 	
 	// Connection to database
 	try{
@@ -16,17 +15,10 @@
 		die('Error: '. $e->getMessage());
 	}
 	
-	if($case==1 AND isset($numdem)){
-		$req=$bdd->prepare('DELETE FROM tbl_relationship WHERE relationship_number = ?');
-		$req->execute(array($numdem));
-		
-	}elseif($case==2 AND isset($numdem)){
-		$req=$bdd->prepare('UPDATE  tbl_relationship SET invitation = 0 WHERE relationship_number = ?');
-		$req->execute(array($numdem));
-	}else{
-		header('Location:homepage.php');
-	}
-	
+
+	$req=$bdd->prepare('DELETE FROM tbl_relationship WHERE relationship_number = ?');
+	$req->execute(array($numdel));
+
 	
 ?>
 

@@ -1,0 +1,61 @@
+html{
+      height:100%;
+    }
+    body{
+      background-size:cover;
+      background-attachment: fixed;
+      height:100%;
+    }
+    div[data-role="page"],.ui-content{
+      background:rgba(0,0,0,0);
+    }
+    #footer{
+      box-sizing:border-box;
+      padding:0 10px;
+    }
+.name{
+      width:100%;
+      text-align:left;
+      font-size:12px;
+      color:#fff;
+      text-shadow:#000 0 0 5px,#000 0 0 2px;
+      margin:10px 0 10px 10px;
+    }
+    .me .name{
+      color:#ff5;
+      text-align:right;
+      margin:10px 15px 10px 0;
+    }
+    .message{
+      text-shadow:none;
+      box-sizing:border-box;
+      width:100%;
+      padding:10px 20px;
+      border-radius:10px;
+      margin-bottom:15px;
+      background:rgba(255,255,255,.6);
+      position:relative;
+      color:#000
+    }
+    .message::before{
+      content:'';
+      width:0;
+      height:0;
+      position:absolute;
+      bottom:-20px;
+      left:15px;
+      border-width:10px 7px;
+      border-style:solid;
+      border-top-color:rgba(255,255,255,.6);
+      border-left-color:rgba(0,0,0,0);
+      border-right-color:rgba(0,0,0,0);
+      border-bottom-color:rgba(0,0,0,0);
+    }
+    .me .message{
+      background:rgba(255,255,150,.6);
+    }
+    .me .message::before{
+      border-top-color:rgba(255,255,150,.6);
+      left:auto;
+      right:15px;
+    }

@@ -1,0 +1,182 @@
+/* line 1, ../sass/relationship.sass */
+body {
+  background: #e7e6e6;
+}
+
+/* line 3, ../sass/relationship.sass */
+.profile {
+  background: #e4524b;
+  border: none;
+}
+
+/* line 7, ../sass/relationship.sass */
+.interest-tag {
+  background: #eee;
+  color: black;
+}
+
+/* line 10, ../sass/relationship.sass */
+.text {
+  color: #fff;
+}
+
+/* line 12, ../sass/relationship.sass */
+.Name {
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+/* line 16, ../sass/relationship.sass */
+.wording {
+  margin-top: 30px;
+}
+
+/* line 18, ../sass/relationship.sass */
+.ui-btn {
+  border: none;
+  font-size: 12px;
+  background: #fff;
+}
+
+/* line 22, ../sass/relationship.sass */
+.category {
+  background: #e4524b;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 12px;
+  margin: 15px 0 5px 0;
+  border-radius: 2px;
+}
+
+/* line 29, ../sass/relationship.sass */
+.suggestion {
+  margin: 0 auto;
+  width: 95%;
+}
+
+/* line 32, ../sass/relationship.sass */
+.suggestion-detail {
+  background: #fff;
+  padding: 15px 8px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 37, ../sass/relationship.sass */
+.ui-btn {
+  background: white;
+  padding-bottom: 0px;
+}
+
+/* line 40, ../sass/relationship.sass */
+.btn-text {
+  color: #000;
+  font-weight: lighter;
+}
+
+/* line 43, ../sass/relationship.sass */
+.ui-btn-active {
+  background: rgba(228, 82, 75, 0.7);
+  color: #fff;
+}
+
+/* line 46, ../sass/relationship.sass */
+.bg {
+  background: #e4524b;
+  color: #fff;
+}
+
+/* line 49, ../sass/relationship.sass */
+.suggest-title {
+  margin: 0;
+}
+
+/* line 51, ../sass/relationship.sass */
+.location {
+  text-align: left;
+  padding-left: 40px;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+/* line 56, ../sass/relationship.sass */
+.learn {
+  margin: 0 auto;
+  width: 95%;
+  border: 1px soild red;
+}
+
+/* line 60, ../sass/relationship.sass */
+.ui-block-a, .ui-block-b, .ui-block-c {
+  padding: 0 4px;
+}
+
+/* line 62, ../sass/relationship.sass */
+.v-category {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  margin: 0 5px 5px 0;
+  line-height: 100px;
+  text-align: center;
+}
+
+/* line 70, ../sass/relationship.sass */
+.square {
+  margin-top: 10px;
+}
+
+/* line 72, ../sass/relationship.sass */
+.final {
+  margin-bottom: 20px;
+}
+
+/* line 74, ../sass/relationship.sass */
+.first {
+  margin-top: 20px;
+}
+
+/* line 76, ../sass/relationship.sass */
+.color-a {
+  background: #fec138;
+}
+
+/* line 78, ../sass/relationship.sass */
+.color-b {
+  background: #5bb981;
+}
+
+/* line 80, ../sass/relationship.sass */
+.color-c {
+  background: #86b3be;
+}
+
+/* line 82, ../sass/relationship.sass */
+.color-d {
+  background: #ec5253;
+}
+
+/* line 84, ../sass/relationship.sass */
+.color-e {
+  background: #3d3b3e;
+}
+
+/* line 86, ../sass/relationship.sass */
+.color-f {
+  background: #1f60ad;
+}
+
+/* line 88, ../sass/relationship.sass */
+.color-g {
+  background: #5283c3;
+}
+
+/* line 90, ../sass/relationship.sass */
+.color-h {
+  background: #86b3be;
+}
+
+/* line 92, ../sass/relationship.sass */
+.color-i {
+  background: #5bb981;
+}

@@ -24,14 +24,28 @@
 		$req->execute(array($usnum2,$usnum1));
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	header('Location:add_friend.php');
-	
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+
+	<div>
+		Loading!
+	</div>
+
+	<meta http-equiv="refresh" content="0.2; URL=add_friend.php">
+	
+</body>
+
+</html>

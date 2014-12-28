@@ -29,12 +29,28 @@
 		
 		
 	}
-	
-	header('Location:index.php');
-
-
-
-
-
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+
+	<div>
+		Loading!
+	</div>
+
+	<meta http-equiv="refresh" content="0.2; URL=index.php">
+	
+</body>
+
+</html>

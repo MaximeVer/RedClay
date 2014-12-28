@@ -1,32 +1,7 @@
 <?php 
 	session_start();
 	if($_SESSION['connec']!=1){
-		try{
-			$bdd = new PDO('mysql:host=localhost;dbname=redclay', 'root', '');
-		}
-		catch(Exception $e){
-			
-			die('Error: '. $e->getMessage());
-		}
-		
-		$password =$_POST['password'];
-		$username =$_POST['username'];
-		
-		$req = $bdd->prepare('SELECT * FROM tbl_users WHERE login = ? AND password = PASSWORD(?)');
-		$req->execute(array($username,$password));
-		
-		if(isset($password)AND isset($username)AND $password!='' AND $username!=''AND $req->rowCount()==1){
-			
-			
-			$_SESSION['connec']=1;
-			while ($donnees = $req->fetch()){
-				$_SESSION['usnum']=$donnees['user_number'];
-				$_SESSION['login']=$donnees['login'];
-			}
-			$req->closeCursor();
-		}else{
-			header('Location:index.php?case=1');
-		}
+		header('Location:index.php?case=1');
 	}
 	
 	$usnum = $_SESSION['usnum'];
@@ -38,9 +13,9 @@
 	<meta charset="UTF-8">
 	<title>Homepage</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="css/addfriend-new.css">
 	<link rel="stylesheet" href="css/homepage-new.css">
 </head>
@@ -94,7 +69,7 @@
 	
 	
 		
-	</div>
+	
 	<div id="left-menu" data-role="panel" data-position="left" >
 	    <a href="" class="friend ui-btn ui-icon-mail ui-btn-icon-left">Notification</a>
 		
@@ -160,7 +135,7 @@
 					
 										echo '<li class="interest-tag notification-tag">'.$topic_dem[0].'</li>';
 									}
-									$req_topic_dem->closeCursor();
+									$req_topic_friend_dem->closeCursor();
 								?>
 							</ul>
 						</div>
@@ -170,16 +145,16 @@
 					</div>
 			<?php
 				}
-				$req_friend_dem->closeCursor();
+				$req_friend_notif->closeCursor();
 			?>
 		</div>
 
 
 
 	   
-	    <a href="" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Friend</a>
-	    <a href="" class="ui-btn ui-icon-edit ui-btn-icon-left">Add interest</a>
-	    <a href="" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a>
+	    <a href="add_friend.php" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Friend</a>
+	    <a href="manage_interest.php" class="ui-btn ui-icon-edit ui-btn-icon-left">Add interest</a>
+	    <a href="setting.php" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a>
 	</div>
 
 
@@ -240,6 +215,8 @@
 				
 			</div>
 			<div class="right" style="height:100%">
+				<a href="delete_friend.php?numdel=<?php echo $num_rel[0]; ?>"><img class='delete' src="images/delete.png" alt=""></a>
+				<a href=""><img class='undo' src="images/undo.png" alt=""></a>
 				<p class="wording text">"I want to learn French"</p>
 				<div class="center">
 					<p class="nationality text">

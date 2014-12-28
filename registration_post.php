@@ -13,7 +13,7 @@
 		
 		if($req->fetch()){
 			$req->closeCursor();
-			header('Location:registration.php?case=2');
+			$path='registration.php?case=2';
 		}
 		else{
 			$req->closeCursor();
@@ -33,12 +33,36 @@
 			$req->execute(array($_POST['login']));
 			$us_number=$req->fetch();
 			$req->closeCursor();
-			header('Location: interest.php?usnum='.$us_number[0]);
+			$path='interest.php?usnum='.$us_number[0];
 		}
 	}
 	else{
 		
-		header('Location:registration.php?case=1');
+		$path='Location:registration.php?case=1';
 	}
 	
 ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+
+	<div>
+		Loading!
+	</div>
+
+	<meta http-equiv="refresh" content="0.2; URL=<?php echo $path ;?>">
+	
+</body>
+
+</html>

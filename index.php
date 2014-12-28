@@ -24,7 +24,7 @@
 			<h1>RedClay</h1>
 		</div>
 		<div data-role="content" class="content">
-			<form action="homepage.php" method="post">
+			<form action="index_post.php" method="post">
 				<input name="username" value="Username" type="text" onFocus="javascript:this.value=''"/>
 				<input name="password" value="Password" type="password" onFocus="javascript:this.value=''"/>
 				<input class="ui-btn" type="submit" value='Login' style="width: 100%"/>
