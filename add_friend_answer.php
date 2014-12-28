@@ -5,7 +5,7 @@
 	}
 	
 	$usnum1 = $_SESSION['usnum'];
-	$usnum2 = $_GET['usnum'];
+	$usnum2 = $_GET['case'];
 	
 	// Connection to database
 	try{
@@ -31,7 +31,7 @@
 	
 	
 	
-	header('Location:add_friend.php');
+	header('Location:homepage.php');
 	
 
 ?>

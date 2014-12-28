@@ -1,0 +1,169 @@
+/* line 1, ../sass/addfriend-new.sass */
+.ui-body-c {
+  background: white;
+}
+
+/* line 3, ../sass/addfriend-new.sass */
+.ui-page-theme-a a {
+  color: #fff;
+  font-weight: lighter;
+}
+/* line 6, ../sass/addfriend-new.sass */
+.ui-page-theme-a a:hover {
+  color: #fff;
+}
+
+/* line 8, ../sass/addfriend-new.sass */
+.content {
+  padding: 0;
+}
+
+/* line 10, ../sass/addfriend-new.sass */
+.profile {
+  border-bottom: 2px dotted #aaa;
+  text-align: center;
+  background: #eee;
+}
+
+/* line 16, ../sass/addfriend-new.sass */
+.left, .right {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* line 22, ../sass/addfriend-new.sass */
+.right {
+  float: right;
+}
+
+/* line 24, ../sass/addfriend-new.sass */
+.left {
+  width: 35%;
+  overflow: hidden;
+  margin-right: -0.5px;
+  float: left;
+}
+
+/* line 30, ../sass/addfriend-new.sass */
+.right {
+  width: 63%;
+  overflow: hidden;
+  margin-right: -0.5px;
+}
+
+/* line 34, ../sass/addfriend-new.sass */
+.shape {
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
+  text-align: center;
+}
+
+/* line 39, ../sass/addfriend-new.sass */
+.Name {
+  margin: 0;
+  margin-top: -5px;
+}
+
+/* line 42, ../sass/addfriend-new.sass */
+img {
+  width: 100%;
+  border-radius: 50px;
+  vertical-align: middle;
+}
+
+/* line 48, ../sass/addfriend-new.sass */
+.interest-tag {
+  display: inline-block;
+}
+
+/* line 51, ../sass/addfriend-new.sass */
+.ui-grid-a > :nth-child(n) {
+  width: 35%;
+  margin-right: -0.5px;
+}
+
+/* line 54, ../sass/addfriend-new.sass */
+.text {
+  margin: 0;
+}
+
+/* line 56, ../sass/addfriend-new.sass */
+.wording {
+  width: 100%;
+  font-size: 18px;
+  margin-top: 25px;
+  padding: 0 0 0 0px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* line 63, ../sass/addfriend-new.sass */
+.nationality, .gender {
+  margin: 0;
+  font-size: 12px;
+  display: inline;
+}
+
+/* line 67, ../sass/addfriend-new.sass */
+.center {
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* line 70, ../sass/addfriend-new.sass */
+.interest {
+  text-align: right;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 6px;
+}
+
+/* line 77, ../sass/addfriend-new.sass */
+.interest-tag {
+  background: #e4524b;
+  color: #fff;
+  padding: 3px 10px;
+  font-weight: lighter;
+  border-radius: 5px;
+  margin: 2px 0;
+}
+
+/* line 84, ../sass/addfriend-new.sass */
+.invite, .ui-body-c .ui-link, .relationship {
+  width: 96%;
+  display: block;
+  margin: 0 auto;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  background: #5bb981;
+  color: #fff;
+  text-decoration: none;
+  font-weight: lighter;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 1px 0;
+  margin-bottom: 10px;
+  border: none;
+}
+/* line 101, ../sass/addfriend-new.sass */
+.invite:active, .ui-body-c .ui-link:active, .relationship:active {
+  background: rgba(91, 185, 129, 0.7);
+  color: #fff;
+}
+/* line 104, ../sass/addfriend-new.sass */
+.invite:hover, .ui-body-c .ui-link:hover, .relationship:hover {
+  color: #fff;
+  background: rgba(91, 185, 129, 0.7);
+}
+
+/* line 122, ../sass/addfriend-new.sass */
+.clearfix {
+  clear: both;
+}
