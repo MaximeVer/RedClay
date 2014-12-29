@@ -1,0 +1,104 @@
+/* line 1, ../sass/vacabulary-new.sass */
+body {
+  background: #eee;
+}
+
+/* line 3, ../sass/vacabulary-new.sass */
+.ui-content {
+  padding: 0;
+}
+
+/* line 6, ../sass/vacabulary-new.sass */
+.category {
+  width: 100%;
+  text-align: center;
+  background: #f6c037;
+  margin: 0;
+  color: #fff;
+}
+
+/* line 12, ../sass/vacabulary-new.sass */
+.english {
+  padding-top: 40px;
+  font-weight: bolder;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* line 17, ../sass/vacabulary-new.sass */
+.chinese {
+  font-size: 26px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+/* line 22, ../sass/vacabulary-new.sass */
+.ui-select {
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 10px;
+}
+
+/* line 27, ../sass/vacabulary-new.sass */
+#level-button {
+  border: none;
+  width: 20%;
+  margin: 0 auto;
+}
+
+/* line 31, ../sass/vacabulary-new.sass */
+.center {
+  margin: 0 auto;
+}
+
+/* line 33, ../sass/vacabulary-new.sass */
+span {
+  font-size: 10px;
+}
+
+/* line 35, ../sass/vacabulary-new.sass */
+.ui-culture {
+  border: none;
+  margin: 0;
+  background: #fff;
+  margin-bottom: 5px;
+  color: #000;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* line 43, ../sass/vacabulary-new.sass */
+.type {
+  font-size: 14px;
+}
+
+/* line 45, ../sass/vacabulary-new.sass */
+.vacabulary {
+  border: none;
+  margin: 0;
+}
+
+/* line 50, ../sass/vacabulary-new.sass */
+.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
+  border: none;
+  background: #fff;
+}
+
+/* line 53, ../sass/vacabulary-new.sass */
+.ui-collapsible-heading-toggle {
+  color: #000;
+  border-color: #fff;
+  background: #fff;
+  margin-top: 5px;
+}
+
+/* line 58, ../sass/vacabulary-new.sass */
+.ui-collapsible-inset .ui-collapsible-heading .ui-btn {
+  margin: 3px 0;
+}
+
+/* line 60, ../sass/vacabulary-new.sass */
+.ui-select .ui-btn select {
+  height: 30px;
+}

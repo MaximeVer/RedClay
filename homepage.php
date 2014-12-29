@@ -18,36 +18,13 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="css/addfriend-new.css">
 	<link rel="stylesheet" href="css/homepage-new.css">
+	<script src= "js/homepage.js"> </script>
 </head>
-<script>
-	$(document).ready(function(){
-  $(".friend").on("tap",function(){
-    $('.friend-notification').toggle("slow");
-  });
-});
-	$(document).ready(function(){
-  $(".profile").on("taphold",function(){
-    $('.delete').show();
-    $('.undo').show();
-  });
-});
-	$(document).ready(function(){
-  $(".delete").on("tap",function(){
-    $('.profile1').hide();
-  });
-});
-	$(document).ready(function(){
-  $(".undo").on("tap",function(){
-    $('.delete').hide();
-    $('.undo').hide();
 
-  });
-});
-</script>
 <body>
 	<div class="header" data-role="header" data-position="fixed" data-theme="b">
 		<a href="#left-menu" data-role="button" data-icon="user" data-iconpos="notext" class="ui-btn-inline"></a>
-		<a href="#" data-role="button" data-icon="gear" data-iconpos="notext" class="ui-btn-inline"></a>
+		
 		<h1>RedClay</h1>
 	</div>
 	
@@ -155,6 +132,7 @@
 	    <a href="add_friend.php" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Friend</a>
 	    <a href="manage_interest.php" class="ui-btn ui-icon-edit ui-btn-icon-left">Add interest</a>
 	    <a href="setting.php" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a>
+		<a href="deconnec.php" class="ui-btn ui-icon-action ui-btn-icon-left">Logout</a>
 	</div>
 
 
@@ -174,8 +152,12 @@
 		$req_num_rel=$bdd->prepare('SELECT DISTINCT relationship_number FROM tbl_relationship WHERE (user_number1= ? OR user_number2 = ?) AND invitation = 0 ORDER BY frequency DESC');
 		$req_num_rel->execute(array($usnum,$usnum));
 		
-		while($num_rel = $req_num_rel->fetch()){
+		$compteur=0;
 		
+		while($num_rel = $req_num_rel->fetch()){
+			
+			$compteur=$compteur + 1;
+			
 			$req_num_friend=$bdd->prepare('SELECT user_number1, user_number2 FROM tbl_relationship WHERE relationship_number= ?');
 			$req_num_friend->execute(array($num_rel[0]));
 			$friend_num=$req_num_friend->fetch();
@@ -204,7 +186,7 @@
 	?>
 	
 	<div data-role="content" class="content">
-		<div class="profile2 profile">
+		<div class="profile<?php echo $compteur; ?> profile">
 			<div class="left" style="height:100%">
 				<div class="shape">
 					<img src="images/female.png" alt="">
@@ -215,8 +197,8 @@
 				
 			</div>
 			<div class="right" style="height:100%">
-				<a href="delete_friend.php?numdel=<?php echo $num_rel[0]; ?>"><img class='delete' src="images/delete.png" alt=""></a>
-				<a href=""><img class='undo' src="images/undo.png" alt=""></a>
+				
+				
 				<p class="wording text">"I want to learn French"</p>
 				<div class="center">
 					<p class="nationality text">
@@ -241,6 +223,11 @@
 			</div>
 			<div class="clearfix"></div>
 			<a class="invite relationship" href="relationship_view.php?friendnum=<?php echo $friendnum; ?>">Manage Your Relationship</a>
+			<div class="delete-friend delete-friend<?php echo $compteur; ?>">
+				<p class="warning delete-friend delete-friend<?php echo $compteur; ?>">Do you want to delete this friend?</p>
+				<a class="invite relationship check no delete " href="delete_friend.php?numdel=<?php echo $num_rel[0]; ?>">Yes</a>
+				<a class="invite relationship check yes undo">No</a>
+			</div>
 		</div>
 			
 		
@@ -258,13 +245,11 @@
 				echo "Ceci est un test".$_SESSION['usnum'].$_SESSION['login'];
 			?>
 			</br>
-			<a href="deconnec.php" >
-				<p >Deconnection!</p>
-			</a>
+			
 		</div>
 </body>
 </html>
 
 
-
+<a href="delete_friend.php?numdel=<?php echo $num_rel[0]; ?>">
 

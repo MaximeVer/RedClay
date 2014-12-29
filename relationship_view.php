@@ -266,35 +266,41 @@
 				<div class="learn">
 					<div class="ui-grid-b square first" style="height:100px">
 						<div class="ui-block-a" style="height:100%">
-							<div class="v-category color-a">
-								<?php
-								
-									$req_topic_name=$bdd->prepare('SELECT topic_name FROM tbl_topic  WHERE topic_number= '.$common_topic[3*$i]);
-									$req_topic_name->execute();
-									$name = $req_topic_name->fetch();
-									echo $name[0];
-								?>
-							</div>
+							<a href='vocabulary.php?topic=<?php echo $common_topic[3*$i]; ?>&friendnum=<?php echo $friendnum;?>'>
+								<div class="v-category color-a">
+									<?php
+									
+										$req_topic_name=$bdd->prepare('SELECT topic_name FROM tbl_topic  WHERE topic_number= '.$common_topic[3*$i]);
+										$req_topic_name->execute();
+										$name = $req_topic_name->fetch();
+										echo $name[0];
+									?>
+								</div>
+							</a>
 						</div>
 						<div class="ui-block-b" style="height:100%">
-							<div class="v-category color-b">
-								<?php
-									$req_topic_name=$bdd->prepare('SELECT topic_name FROM tbl_topic  WHERE topic_number= '.$common_topic[3*$i+1]);
-									$req_topic_name->execute();
-									$name = $req_topic_name->fetch();
-									echo $name[0];
-								?>
-							</div>
+							<a href='vocabulary.php?topic=<?php echo $common_topic[3*$i+1]; ?>&friendnum=<?php echo $friendnum;?>'>
+								<div class="v-category color-b">
+									<?php
+										$req_topic_name=$bdd->prepare('SELECT topic_name FROM tbl_topic  WHERE topic_number= '.$common_topic[3*$i+1]);
+										$req_topic_name->execute();
+										$name = $req_topic_name->fetch();
+										echo $name[0];
+									?>
+								</div>
+							</a>
 						</div>
 						<div class="ui-block-c" style="height:100%">
-							<div class="v-category color-c">
-								<?php
-									$req_topic_name=$bdd->prepare('SELECT topic_name FROM tbl_topic  WHERE topic_number= '.$common_topic[3*$i+2]);
-									$req_topic_name->execute();
-									$name = $req_topic_name->fetch();
-									echo $name[0];
-								?>
-							</div>
+							<a href='vocabulary.php?topic=<?php echo $common_topic[3*$i+2]; ?>&friendnum=<?php echo $friendnum;?>'>
+								<div class="v-category color-c">
+									<?php
+										$req_topic_name=$bdd->prepare('SELECT topic_name FROM tbl_topic  WHERE topic_number= '.$common_topic[3*$i+2]);
+										$req_topic_name->execute();
+										$name = $req_topic_name->fetch();
+										echo $name[0];
+									?>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>

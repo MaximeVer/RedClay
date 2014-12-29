@@ -17,6 +17,7 @@
 </head>
 <body>
 	<div class="header" data-role="header" data-position="fixed">
+		<a href="homepage.php" data-role="button" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-inline"></a>
 		<h1>RedClay</h1>
 	</div>
 	<?php
