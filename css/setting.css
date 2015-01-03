@@ -1,0 +1,34 @@
+/* line 1, ../sass/setting.sass */
+.change {
+  text-align: center;
+  padding: 10px 0;
+  background: #ec5253;
+  color: #fff;
+}
+
+/* line 6, ../sass/setting.sass */
+.ui-btn {
+  background: #aaa;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+}
+/* line 11, ../sass/setting.sass */
+.ui-btn:active {
+  background: #ec5253;
+}
+/* line 13, ../sass/setting.sass */
+.ui-btn:hover {
+  background: #ec5253;
+}
+
+/* line 15, ../sass/setting.sass */
+.ui-footer {
+  border: none;
+  margin: 0 auto;
+}
+
+/* line 18, ../sass/setting.sass */
+.ui-content {
+  padding: 0 5px;
+}

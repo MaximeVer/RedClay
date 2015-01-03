@@ -6,60 +6,185 @@
 });
 	$(document).ready(function(){
   $(".profile1").on("taphold",function(){
-    $('.delete').show();
-    $('.undo').show();
+    $('.delete1').show();
+    $('.undo1').show();
     $('.profile1').addClass('selected');
     $('.delete-friend1').show();
     $('.hide-manage1').hide();
-    
-
-
   });
 });
+	
 	$(document).ready(function(){
-  $(".delete1").on("tap",function(){
-    $('.profile1').hide('slow');
-
-
-  });
-});
-	$(document).ready(function(){
-  $(".undo").on("tap",function(){
-    $('.delete').hide();
-    $('.undo').hide();
+  $(".undo1").on("tap",function(){
+    $('.delete1').hide();
+    $('.undo1').hide();
     $('.profile1').removeClass('selected');
     $('.delete-friend1').hide();
     $('.hide-manage1').show();
-
-
   });
 });
-
   $(document).ready(function(){
   $(".profile2").on("taphold",function(){
-    $('.delete').show();
-    $('.undo').show();
+    $('.delete2').show();
+    $('.undo2').show();
     $('.profile2').addClass('selected');
     $('.delete-friend2').show();
     $('.hide-manage2').hide();
-
-
   });
 });
   $(document).ready(function(){
-  $(".delete2").on("tap",function(){
-    $('.profile2').hide('slow');
-
-  });
-});
-  $(document).ready(function(){
-  $(".undo").on("tap",function(){
-    $('.delete').hide();
-    $('.undo').hide();
+  $(".undo2").on("tap",function(){
+    $('.delete2').hide();
+    $('.undo2').hide();
     $('.profile2').removeClass('selected');
     $('.delete-friend2').hide();
     $('.hide-manage2').show();
+  });
+});
 
+    $(document).ready(function(){
+  $(".profile3").on("taphold",function(){
+    $('.delete3').show();
+    $('.undo3').show();
+    $('.profile3').addClass('selected');
+    $('.delete-friend3').show();
+    $('.hide-manage3').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo3").on("tap",function(){
+    $('.delete3').hide();
+    $('.undo3').hide();
+    $('.profile3').removeClass('selected');
+    $('.delete-friend3').hide();
+    $('.hide-manage3').show();
+  });
+});
 
+  $(document).ready(function(){
+  $(".profile4").on("taphold",function(){
+    $('.delete4').show();
+    $('.undo4').show();
+    $('.profile4').addClass('selected');
+    $('.delete-friend4').show();
+    $('.hide-manage4').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo4").on("tap",function(){
+    $('.delete4').hide();
+    $('.undo4').hide();
+    $('.profile4').removeClass('selected');
+    $('.delete-friend4').hide();
+    $('.hide-manage4').show();
+  });
+});
+
+    $(document).ready(function(){
+  $(".profile5").on("taphold",function(){
+    $('.delete5').show();
+    $('.undo5').show();
+    $('.profile5').addClass('selected');
+    $('.delete-friend5').show();
+    $('.hide-manage5').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo5").on("tap",function(){
+    $('.delete5').hide();
+    $('.undo5').hide();
+    $('.profile5').removeClass('selected');
+    $('.delete-friend5').hide();
+    $('.hide-manage5').show();
+  });
+});
+  $(document).ready(function(){
+  $(".profile6").on("taphold",function(){
+    $('.delete6').show();
+    $('.undo6').show();
+    $('.profile6').addClass('selected');
+    $('.delete-friend6').show();
+    $('.hide-manage6').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo6").on("tap",function(){
+    $('.delete6').hide();
+    $('.undo6').hide();
+    $('.profile6').removeClass('selected');
+    $('.delete-friend6').hide();
+    $('.hide-manage6').show();
+  });
+});
+  $(document).ready(function(){
+  $(".profile7").on("taphold",function(){
+    $('.delete7').show();
+    $('.undo7').show();
+    $('.profile7').addClass('selected');
+    $('.delete-friend7').show();
+    $('.hide-manage7').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo7").on("tap",function(){
+    $('.delete7').hide();
+    $('.undo7').hide();
+    $('.profile7').removeClass('selected');
+    $('.delete-friend7').hide();
+    $('.hide-manage7').show();
+  });
+});
+    $(document).ready(function(){
+  $(".profile8").on("taphold",function(){
+    $('.delete8').show();
+    $('.undo8').show();
+    $('.profile8').addClass('selected');
+    $('.delete-friend8').show();
+    $('.hide-manage8').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo8").on("tap",function(){
+    $('.delete8').hide();
+    $('.undo8').hide();
+    $('.profile8').removeClass('selected');
+    $('.delete-friend8').hide();
+    $('.hide-manage8').show();
+  });
+});
+    $(document).ready(function(){
+  $(".profile9").on("taphold",function(){
+    $('.delete9').show();
+    $('.undo9').show();
+    $('.profile9').addClass('selected');
+    $('.delete-friend9').show();
+    $('.hide-manage9').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo9").on("tap",function(){
+    $('.delete9').hide();
+    $('.undo9').hide();
+    $('.profile9').removeClass('selected');
+    $('.delete-friend9').hide();
+    $('.hide-manage9').show();
+  });
+});
+  $(document).ready(function(){
+  $(".profile10").on("taphold",function(){
+    $('.delete10').show();
+    $('.undo10').show();
+    $('.profile10').addClass('selected');
+    $('.delete-friend10').show();
+    $('.hide-manage10').hide();
+  });
+});
+  $(document).ready(function(){
+  $(".undo10").on("tap",function(){
+    $('.delete10').hide();
+    $('.undo10').hide();
+    $('.profile10').removeClass('selected');
+    $('.delete-friend10').hide();
+    $('.hide-manage10').show();
   });
 });

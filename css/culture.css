@@ -1,0 +1,18 @@
+/* line 1, ../sass/culture.sass */
+.culture {
+  background: #999;
+  padding: 2px 0;
+}
+
+/* line 5, ../sass/culture.sass */
+.culture p {
+  text-align: center;
+  color: #fff;
+}
+
+/* line 8, ../sass/culture.sass */
+.culture-point {
+  background: #fff;
+  padding: 5px 20px;
+  margin: 10px;
+}

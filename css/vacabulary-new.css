@@ -28,36 +28,37 @@ body {
 /* line 17, ../sass/vacabulary-new.sass */
 .chinese {
   font-size: 26px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   margin-top: 5px;
+  margin-bottom: 0;
   font-weight: bolder;
 }
 
-/* line 22, ../sass/vacabulary-new.sass */
+/* line 23, ../sass/vacabulary-new.sass */
 .ui-select {
   margin: 0 auto;
   display: block;
   padding-bottom: 10px;
 }
 
-/* line 27, ../sass/vacabulary-new.sass */
+/* line 28, ../sass/vacabulary-new.sass */
 #level-button {
   border: none;
   width: 20%;
   margin: 0 auto;
 }
 
-/* line 31, ../sass/vacabulary-new.sass */
+/* line 32, ../sass/vacabulary-new.sass */
 .center {
   margin: 0 auto;
 }
 
-/* line 33, ../sass/vacabulary-new.sass */
+/* line 34, ../sass/vacabulary-new.sass */
 span {
   font-size: 10px;
 }
 
-/* line 35, ../sass/vacabulary-new.sass */
+/* line 36, ../sass/vacabulary-new.sass */
 .ui-culture {
   border: none;
   margin: 0;
@@ -68,24 +69,29 @@ span {
   font-size: 14px;
 }
 
-/* line 43, ../sass/vacabulary-new.sass */
+/* line 44, ../sass/vacabulary-new.sass */
+.culture {
+  margin: 15px 0;
+}
+
+/* line 46, ../sass/vacabulary-new.sass */
 .type {
   font-size: 14px;
 }
 
-/* line 45, ../sass/vacabulary-new.sass */
+/* line 48, ../sass/vacabulary-new.sass */
 .vacabulary {
   border: none;
   margin: 0;
 }
 
-/* line 50, ../sass/vacabulary-new.sass */
+/* line 53, ../sass/vacabulary-new.sass */
 .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
   border: none;
   background: #fff;
 }
 
-/* line 53, ../sass/vacabulary-new.sass */
+/* line 56, ../sass/vacabulary-new.sass */
 .ui-collapsible-heading-toggle {
   color: #000;
   border-color: #fff;
@@ -93,12 +99,33 @@ span {
   margin-top: 5px;
 }
 
-/* line 58, ../sass/vacabulary-new.sass */
+/* line 61, ../sass/vacabulary-new.sass */
 .ui-collapsible-inset .ui-collapsible-heading .ui-btn {
   margin: 3px 0;
 }
 
-/* line 60, ../sass/vacabulary-new.sass */
+/* line 63, ../sass/vacabulary-new.sass */
 .ui-select .ui-btn select {
   height: 30px;
+}
+
+/* line 65, ../sass/vacabulary-new.sass */
+.ui-btn {
+  border: none;
+  background: #fff;
+}
+/* line 68, ../sass/vacabulary-new.sass */
+.ui-btn:active {
+  background: rgba(246, 192, 55, 0.5);
+}
+
+/* line 70, ../sass/vacabulary-new.sass */
+.btn-text {
+  color: #000;
+}
+
+/* line 73, ../sass/vacabulary-new.sass */
+.bg {
+  background: #f6c037;
+  color: #fff;
 }

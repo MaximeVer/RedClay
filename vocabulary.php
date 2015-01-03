@@ -47,34 +47,11 @@
 
 </head>
 
-<script>
-function showUser(str) {
-    if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else { 
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("GET","words.php?q="+str,true);
-        xmlhttp.send();
-    }
-}
-</script>
 
 
 
 <body>
-	<div data-role="page" data-theme="c">
+	<div data-role="page" data-theme="c" id="lv1">
 		
 		<div class="header" data-role="header" data-position="fixed" data-theme="b">
 			<a href="relationship_view.php?friendnum=<?php echo $friendnum;?>" data-role="button" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-inline"></a>
@@ -88,25 +65,148 @@ function showUser(str) {
 				</br>
 			</div>
 			<div class="culture">
-				<a href="#" class="ui-btn ui-icon-carat-r ui-btn-icon-left ui-culture">View some culture difference in <?php echo $topic_name ;?></a>
+				<a href="culture.php?topic=<?php echo $num_topic; ?>&friendnum=<?php echo $friendnum; ?>" class="ui-btn ui-icon-carat-r ui-btn-icon-left ui-culture">View some culture difference in <?php echo $topic_name ;?></a>
 			</div >
-			<div id='txtHint'>
-				<div data-role="collapsibleset" data-theme='c' data-collapsed-icon="carat-d" >
+			
+			<div data-role="navbar">
+	      		<ul>
+			        <li class="btn-text"><a href="#" class="ui-btn-active btn-text bg">Level 1</a></li>
+			        <li class="btn-text"><a href="#lv2" class="btn-text">Level 2</a></li>
+			        <li class="btn-text"><a href="#lv3" class="btn-text">Level 3</a></li>
+	      		</ul>
+	    	</div>
+			<div data-role="collapsibleset" data-theme='c' data-collapsed-icon="carat-d">
+				<?php
+					$req_selec_mot=$bdd-> prepare('SELECT chinese_word, pinyin, english_word FROM tbl_vocabulary WHERE level = ? AND topic_number = ?');
+					$req_selec_mot->execute(array(1,$num_topic));
+				
+				
+				
+				
+					while($word=$req_selec_mot->fetch()){ 
+				
+				?>
+				
+				
 					
-					<div style="color:red" >
-						<h3>Click me - I'm collapsible!</h3>
-						<p>I'm the expanded content.</p>
+						<div data-role="collapsible" class='vacabulary'>
+							<h3><?php echo $word[0]; ?></h3>
+							<p><?php echo $word[1].'</br>'.$word[2]; ?></p>
 						</div>
-					<div  class='vacabulary'>
-						<h3>Click me - I'm collapsible!</h3>
-						<p>I'm the expanded content.</p>
-					</div>
-					<div  class='vacabulary'>
-						<h3>Click me - I'm collapsible!</h3>
-						<p>I'm the expanded content.</p>
-					</div>
-				</div>
+						
+					<?php
+					}
+					$req_selec_mot->closeCursor();
+					?>
 			</div>
+		</div>
+	</div>
+	<div data-role="page" data-theme="c" id='lv2'>
+		
+		
+		<div class="header" data-role="header" data-position="fixed" data-theme="b">
+			<a href="relationship_view.php?friendnum=<?php echo $friendnum;?>" data-role="button" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-inline"></a>
+			<h1>RedClay</h1>
+		</div>
+		
+		<div data-role="content">
+			<div class="category">
+				<p class="english"><?php echo $topic_name ;?></p>
+				<p class="chinese"><?php echo $chinese ;?></p>
+				</br>
+			</div>
+			<div class="culture">
+				<a href="culture.php?topic=<?php echo $num_topic; ?>&friendnum=<?php echo $friendnum; ?>" class="ui-btn ui-icon-carat-r ui-btn-icon-left ui-culture">View some culture difference in <?php echo $topic_name ;?></a>
+			</div>
+			<div data-role="navbar">
+	      		<ul>
+			        <li class="btn-text"><a href="#lv1" class="btn-text ">Level 1</a></li>
+			        <li class="btn-text"><a href="#" class="btn-text ui-btn-active bg">Level 2</a></li>
+			        <li class="btn-text"><a href="#lv3" class="btn-text">Level 3</a></li>
+	      		</ul>
+	    	</div>
+			<div data-role="collapsibleset" data-theme='c' data-collapsed-icon="carat-d">
+					
+					<?php
+					$req_selec_mot=$bdd-> prepare('SELECT chinese_word, pinyin, english_word FROM tbl_vocabulary WHERE level = ? AND topic_number = ?');
+					$req_selec_mot->execute(array(2,$num_topic));
+				
+				
+				
+				
+				while($word=$req_selec_mot->fetch()){ 
+				
+				?>
+				
+				
+						<div data-role="collapsible" class='vacabulary'>
+							<h3><?php echo $word[0]; ?></h3>
+							<p><?php echo $word[1].'</br>'.$word[2]; ?></p>
+						</div>
+					
+				<?php
+				}
+				$req_selec_mot->closeCursor();
+				?>
+			</div>
+		</div>
+					
+				
+		
+	</div>
+	<div data-role="page" data-theme="c" id='lv3'>
+		
+		
+		<div class="header" data-role="header" data-position="fixed" data-theme="b">
+			<a href="relationship_view.php?friendnum=<?php echo $friendnum;?>" data-role="button" data-icon="arrow-l" data-iconpos="notext" class="ui-btn-inline"></a>
+			<h1>RedClay</h1>
+		</div>
+		
+		<div data-role="content">
+			<div class="category">
+				<p class="english"><?php echo $topic_name ;?></p>
+				<p class="chinese"><?php echo $chinese ;?></p>
+				</br>
+			</div>
+			<div class="culture">
+				<a href="culture.php?topic=<?php echo $num_topic; ?>&friendnum=<?php echo $friendnum; ?>" class="ui-btn ui-icon-carat-r ui-btn-icon-left ui-culture">View some culture difference in <?php echo $topic_name ;?></a>
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li class="btn-text"><a href="#lv1" class="btn-text ">Level 1</a></li>
+					<li class="btn-text"><a href="#lv2" class="btn-text">Level 2</a></li>
+					<li class="btn-text"><a href="#" class="btn-text bg">Level 3</a></li>
+				</ul>
+			</div>
+			<div data-role="collapsibleset" data-theme='c' data-collapsed-icon="carat-d">
+				
+				<?php
+				$req_selec_mot=$bdd-> prepare('SELECT chinese_word, pinyin, english_word FROM tbl_vocabulary WHERE level = ? AND topic_number = ?');
+				$req_selec_mot->execute(array(1,$num_topic));
+			
+			
+			
+				
+				while($word=$req_selec_mot->fetch()){ 
+				
+				?>
+				
+					
+						
+						<div data-role="collapsible" class='vacabulary'>
+							<h3><?php echo $word[0]; ?></h3>
+							<p><?php echo $word[1].'</br>'.$word[2]; ?></p>
+						</div>
+						
+				<?php
+				}
+				$req_selec_mot->closeCursor();
+				?>
+					
+			</div>
+		</div>
+	</div>
+			
 		</div>
 	</div>
 </body>

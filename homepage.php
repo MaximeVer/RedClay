@@ -130,7 +130,7 @@
 
 	   
 	    <a href="add_friend.php" class="ui-btn ui-icon-plus ui-btn-icon-left">Add Friend</a>
-	    <a href="manage_interest.php" class="ui-btn ui-icon-edit ui-btn-icon-left">Add interest</a>
+	    <a href="addinterest.php" class="ui-btn ui-icon-edit ui-btn-icon-left">Add interest</a>
 	    <a href="setting.php" class="ui-btn ui-icon-gear ui-btn-icon-left">Setting</a>
 		<a href="deconnec.php" class="ui-btn ui-icon-action ui-btn-icon-left">Logout</a>
 	</div>

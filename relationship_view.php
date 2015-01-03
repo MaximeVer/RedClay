@@ -167,17 +167,22 @@
 				$name = $req_topic_name->fetch();
 				
 				?>
-					<li class="interest-tag category"><?php echo $name[0];?></li>
+				<li class="interest-tag category"><?php echo $name[0];?></li>
+				<?php
+				$req_topic_activity=$bdd->prepare('SELECT title, description FROM tbl_activity WHERE topic_number= ?');
+				$req_topic_activity->execute(array($common_topic[$indice]));
+				
+				while($activity=$req_topic_activity->fetch()){
+				?>
+					
 					<div class="suggestion-detail">
-						<h3 class="suggest-title">Jog in Yuan Ming Yuan park</h3>
-						<a href="" class="location ui-btn ui-icon-location ui-btn-icon-left">Beijing</a>
+						<h3 class="suggest-title"><?php echo $activity[0];?></h3>
+						<a ><?php echo $activity[1];?></a>
 					</div>
-					<div class="suggestion-detail">
-						<h3 class="suggest-title">Jog in Yuan Ming Yuan park</h3>
-						<a href="" class="location ui-btn ui-icon-location ui-btn-icon-left">Beijing</a>
-					</div>
+					
 	    		
-				<?php 
+				<?php
+					}
 				} 
 				?>
 				

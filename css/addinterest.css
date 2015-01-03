@@ -1,0 +1,44 @@
+/* line 4, ../sass/addinterest.sass */
+.ui-btn {
+  background: #aaa;
+  border-color: green;
+  color: #fff;
+  margin: 0 auto;
+}
+/* line 9, ../sass/addinterest.sass */
+.ui-btn:active {
+  background: #ec5253;
+}
+/* line 11, ../sass/addinterest.sass */
+.ui-btn:hover {
+  background: #ec5253;
+}
+
+/* line 13, ../sass/addinterest.sass */
+.ui-footer {
+  border: none;
+}
+
+/* line 15, ../sass/addinterest.sass */
+.category {
+  text-align: center;
+  width: 100%;
+  background: #bbb;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* line 21, ../sass/addinterest.sass */
+.ui-content {
+  padding: 5px;
+}
+
+/* line 23, ../sass/addinterest.sass */
+.category1 {
+  background: #fec138;
+}
+
+/* line 25, ../sass/addinterest.sass */
+.category2 {
+  background: #2bc3aa;
+}
